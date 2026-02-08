@@ -114,3 +114,69 @@ body {
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 15px;
 }
+/* --- OPTIMIZACIÓN MÓVIL (Responsive) --- */
+
+@media screen and (max-width: 768px) {
+    /* Navbar móvil */
+    .nav-links {
+        display: none; /* Se oculta por defecto en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-dark);
+        padding: 40px 0;
+        text-align: center;
+        border-bottom: 2px solid var(--accent);
+    }
+
+    .nav-links.active { display: flex; } /* Clase que activaremos con JS */
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--text-light);
+        transition: 0.3s;
+    }
+
+    /* Hero en móvil */
+    .hero {
+        padding: 0 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Texto más pequeño para que no se corte */
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin: 20px auto 30px;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column; /* Botones uno sobre otro */
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Tarjetas de servicios en móvil */
+    .services {
+        padding: 60px 5%;
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}

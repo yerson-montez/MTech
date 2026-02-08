@@ -11,11 +11,18 @@
 
     <nav class="navbar">
         <div class="logo">M<span>Tech</span></div>
+    
+        <div class="menu-toggle" id="mobile-menu">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </div>
+
         <ul class="nav-links">
-            <li><a href="#software">Software</a></li>
-            <li><a href="#automation">Automatización</a></li>
-            <li><a href="#smart">Sistemas Inteligentes</a></li>
-            <li><a href="#contacto" class="btn-cta">Contacto</a></li>
+           <li><a href="#software">Software</a></li>
+           <li><a href="#automation">Automatización</a></li>
+           <li><a href="#smart">Sistemas</a></li>
+           <li><a href="#contacto" class="btn-cta-nav">Contacto</a></li>
         </ul>
     </nav>
 
@@ -47,6 +54,17 @@
             <p>Analítica de datos en tiempo real y optimización inteligente de recursos.</p>
         </div>
     </section>
+
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+    });
+    </script>
 
 </body>
 </html>
